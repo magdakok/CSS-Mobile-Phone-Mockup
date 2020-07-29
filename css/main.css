@@ -21,4 +21,14 @@ body {
   font-weight: 400;
   line-height: 1.7;
 }
+
+.container::before {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 80vh;
+  background-color: goldenrod;
+  border-bottom-left-radius: 50vh;
+  border-bottom-right-radius: 50vh;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,11 @@
+.container {
+  &::before {
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 80vh;
+    background-color: goldenrod;
+    border-bottom-left-radius: 50vh;
+    border-bottom-right-radius: 50vh;
+  }
+}
