@@ -155,9 +155,9 @@ body {
 }
 
 .mobile__top .top__arrow {
-  font-weight: 700;
-  -webkit-transform: scaleX(0.3) scaleY(1.5) translateY(2px);
-          transform: scaleX(0.3) scaleY(1.5) translateY(2px);
+  font-weight: 500;
+  -webkit-transform: scaleX(0.5) scaleY(1.2) translateY(2px);
+          transform: scaleX(0.5) scaleY(1.2) translateY(2px);
 }
 
 .mobile__top .top__avatar {
@@ -195,7 +195,7 @@ body {
 }
 
 .mobile__top .top__settings {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.1rem;
   line-height: 1.1rem;
   position: relative;
@@ -219,6 +219,137 @@ body {
   background-color: #f5f3f7;
   height: 100%;
   width: 100%;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0.6rem 1rem 0.8rem;
+}
+
+.mobile__chat .messages-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mobile__chat .message {
+  max-width: 60%;
+  display: inline-block;
+  padding: 0.8rem;
+  margin-bottom: 0.9rem;
+  border-radius: 0.8rem;
+}
+
+.mobile__chat .message--walker {
+  color: #9241c8;
+  background-color: #ede5f4;
+  border-bottom-left-radius: 2px;
+}
+
+.mobile__chat .message--owner {
+  color: #6e5d7e;
+  background-color: #ffffff;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.mobile__chat .message--option {
+  color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to right, #e942ff, #8838ff);
+  padding: 1rem;
+  display: block;
+  max-width: none;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile__chat .message--option .price {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+}
+
+.mobile__chat .pictures {
+  max-width: 80%;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.mobile__chat .pictures__img {
+  border-radius: 0.8rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.mobile__chat .pictures--owner {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.mobile__chat .pictures--owner > * {
+  margin-left: 0.6rem;
+}
+
+.mobile__chat .custom-input {
+  margin-top: auto;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  padding: 0.5rem 0.5rem 0.5rem 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile__chat .custom-input__text {
+  color: #c6cacd;
+}
+
+.mobile__chat .custom-input__btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #3e2753;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile__chat .first-message {
+  margin-top: 0.6rem;
 }
 
 .text-section {
