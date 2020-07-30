@@ -72,7 +72,7 @@ body {
   width: 51rem;
   border-radius: 100vh 100vh 0 0;
   z-index: 1;
-  background-color: #f5f3f7;
+  background-color: #f9f4fa;
   bottom: 0;
   right: -28.8%;
 }
@@ -362,11 +362,13 @@ body {
   font-weight: 500;
   margin-bottom: 2.75rem;
   letter-spacing: -1.2px;
+  color: #3e2753;
 }
 
 .text-section .paragraph {
   font-size: 1.7rem;
   line-height: 2.75rem;
   letter-spacing: -0.4px;
+  color: #a39daa;
 }
 /*# sourceMappingURL=main.css.map */

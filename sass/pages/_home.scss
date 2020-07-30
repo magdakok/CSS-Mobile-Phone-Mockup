@@ -22,7 +22,7 @@ body {
   }
   &::after {
     @include background-shape(100vh 100vh 0 0);
-    background-color: $color-background;
+    background-color: $color-light-purple;
     bottom: 0;
     right: -28.8%;
   }
@@ -153,7 +153,7 @@ body {
 
       &--walker {
         color: $color-violet;
-        background-color: #ede5f4;
+        background-color: $color-light-violet;
         border-bottom-left-radius: 2px;
       }
 
@@ -245,11 +245,13 @@ body {
     font-weight: 500;
     margin-bottom: 2.75rem;
     letter-spacing: -1.2px;
+    color: $color-violet-dark;
   }
 
   .paragraph {
     font-size: 1.7rem;
     line-height: 2.75rem;
     letter-spacing: -0.4px;
+    color: $color-gray-violet;
   }
 }
