@@ -130,7 +130,7 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  top: 0;
+  top: -1.1rem;
   background-color: #ffffff;
   width: 12.9rem;
   height: 2.9rem;
