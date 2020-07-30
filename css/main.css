@@ -22,12 +22,6 @@ body {
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-}
-
-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,7 +58,7 @@ body {
   width: 51rem;
   border-radius: 0 0 100vh 100vh;
   z-index: 1;
-  background-image: radial-gradient(circle at top right, #e942ff, #8838ff);
+  background-image: radial-gradient(circle at top right, #e942ff -20%, #8838ff);
   top: 0;
   left: -20.3%;
 }
@@ -85,7 +79,7 @@ body {
 
 .content {
   position: absolute;
-  width: 71.5rem;
+  width: 82rem;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,6 +90,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translateX(5.3rem);
+          transform: translateX(5.3rem);
 }
 
 .mobile__outline {
@@ -209,5 +205,22 @@ body {
 
 .mobile__top .top__settings::after {
   top: 4px;
+}
+
+.text-section {
+  margin-left: 12.4rem;
+}
+
+.text-section .main-heading {
+  font-size: 4.2rem;
+  line-height: 4.3rem;
+  margin-bottom: 2.75rem;
+  letter-spacing: -2px;
+}
+
+.text-section .paragraph {
+  font-size: 1.7rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.4px;
 }
 /*# sourceMappingURL=main.css.map */

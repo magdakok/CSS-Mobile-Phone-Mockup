@@ -14,7 +14,7 @@ body {
     @include background-shape(0 0 100vh 100vh);
     background-image: radial-gradient(
       circle at top right,
-      $gradient-magenta,
+      $gradient-magenta -20%,
       $gradient-violet
     );
     top: 0;
@@ -30,10 +30,11 @@ body {
 
 .content {
   position: absolute;
-  width: 71.5rem; //temporary to build the phone
+  width: 82rem; //temporary to build the phone
   z-index: 10;
 
   @include flex-center;
+  transform: translateX(5.3rem);
 }
 
 .mobile {
@@ -50,6 +51,7 @@ body {
     background-color: $color-background;
     box-shadow: 0px 0px 70px -23px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    // user-select: none; to be activated when the project is finished
 
     &::before {
       content: "";
@@ -124,5 +126,22 @@ body {
         top: 4px;
       }
     }
+  }
+}
+
+.text-section {
+  margin-left: 12.4rem;
+
+  .main-heading {
+    font-size: 4.2rem;
+    line-height: 4.3rem;
+    margin-bottom: 2.75rem;
+    letter-spacing: -2px;
+  }
+
+  .paragraph {
+    font-size: 1.7rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.4px;
   }
 }
