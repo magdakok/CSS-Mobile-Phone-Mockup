@@ -1,11 +1,128 @@
-.container {
+body {
+  @include flex-center;
+}
+
+.background-container {
+  width: 115.2rem;
+  min-height: 100vh;
+  z-index: 2;
+  position: relative;
+
+  @include flex-center;
+
   &::before {
-    content: "";
-    display: block;
-    width: 15rem;
-    height: 80vh;
-    background-color: goldenrod;
-    border-bottom-left-radius: 50vh;
-    border-bottom-right-radius: 50vh;
+    @include background-shape(0 0 100vh 100vh);
+    background-image: radial-gradient(
+      circle at top right,
+      $gradient-magenta,
+      $gradient-violet
+    );
+    top: 0;
+    left: -20.3%;
+  }
+  &::after {
+    @include background-shape(100vh 100vh 0 0);
+    background-color: $color-background;
+    bottom: 0;
+    right: -28.8%;
+  }
+}
+
+.content {
+  position: absolute;
+  width: 71.5rem; //temporary to build the phone
+  z-index: 10;
+
+  @include flex-center;
+}
+
+.mobile {
+  &__outline {
+    flex: 0 0 24.8rem;
+
+    display: flex;
+    justify-content: center;
+
+    width: 24.8rem;
+    height: 50.5rem;
+    border-radius: 3rem;
+    border: 1.1rem solid $color-white;
+    background-color: $color-background;
+    box-shadow: 0px 0px 70px -23px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      background-color: $color-white;
+      width: 12.9rem;
+      height: 2.9rem;
+      border-radius: 0 0 1.5rem 1.5rem;
+      z-index: 8;
+    }
+  }
+
+  &__top {
+    width: 100%;
+    height: 6.7rem;
+    @include gradient(to left);
+    @include flex-center;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 2.5rem 1.5rem 1rem 1.1rem;
+    color: $color-white;
+
+    .top__arrow {
+      font-weight: 700;
+      transform: scaleX(0.3) scaleY(1.5) translateY(2px);
+    }
+
+    .top__avatar {
+      width: 2.3rem;
+      height: 2.3rem;
+      border-radius: 50%;
+      border: 1px solid $color-white;
+      margin: 0.9rem 1rem 0.5rem 0.5rem;
+    }
+    .top__user {
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user__name {
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+      letter-spacing: 0.4px;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      margin-top: 0.3rem;
+    }
+    .user__status {
+      color: $color-violet-pale;
+      font-size: 0.9rem;
+      line-height: 0.9rem;
+      letter-spacing: -0.5px;
+    }
+
+    .top__settings {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+      position: relative;
+      &::before,
+      &::after {
+        content: ".";
+        display: block;
+        position: absolute;
+      }
+      &::before {
+        top: -4px;
+      }
+      &::after {
+        top: 4px;
+      }
+    }
   }
 }

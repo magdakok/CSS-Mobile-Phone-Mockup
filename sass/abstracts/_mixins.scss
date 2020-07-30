@@ -1,23 +1,49 @@
-@mixin clearfix {
-    &::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
+@mixin background-shape($corners) {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 87.3%;
+  width: 51rem;
+  border-radius: $corners;
+  z-index: 1;
 }
 
-@mixin block-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gradient($direction: to right) {
+  background-image: linear-gradient(
+    $direction,
+    $gradient-magenta,
+    $gradient-violet
+  );
 }
 
 //MEDIA QUERY MANAGER
 
-@mixin respond($breakpoint) { 
-    @if $breakpoint == phone { @media(max-width:37.5em) {@content};} //600px
-    @if $breakpoint == tab-port { @media(max-width:56.25em) {@content};}  //900px
-    @if $breakpoint == tab-land { @media(max-width:75em) {@content};}  //1200px
-    @if $breakpoint == big-desktop { @media(min-width:112.5em) {@content};}  //1800px
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  } //600px
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  } //900px
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  } //1200px
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  } //1800px
 }

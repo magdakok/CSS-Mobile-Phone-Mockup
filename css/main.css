@@ -9,11 +9,16 @@
 
 html {
   font-size: 62.5%;
+  overflow: hidden;
 }
 
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
 }
 
 body {
@@ -22,13 +27,187 @@ body {
   line-height: 1.7;
 }
 
-.container::before {
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background-container {
+  width: 115.2rem;
+  min-height: 100vh;
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background-container::before {
   content: "";
   display: block;
-  width: 15rem;
-  height: 80vh;
-  background-color: goldenrod;
-  border-bottom-left-radius: 50vh;
-  border-bottom-right-radius: 50vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 87.3%;
+  width: 51rem;
+  border-radius: 0 0 100vh 100vh;
+  z-index: 1;
+  background-image: radial-gradient(circle at top right, #e942ff, #8838ff);
+  top: 0;
+  left: -20.3%;
+}
+
+.background-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 87.3%;
+  width: 51rem;
+  border-radius: 100vh 100vh 0 0;
+  z-index: 1;
+  background-color: #f5f3f7;
+  bottom: 0;
+  right: -28.8%;
+}
+
+.content {
+  position: absolute;
+  width: 71.5rem;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile__outline {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24.8rem;
+          flex: 0 0 24.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24.8rem;
+  height: 50.5rem;
+  border-radius: 3rem;
+  border: 1.1rem solid #ffffff;
+  background-color: #f5f3f7;
+  -webkit-box-shadow: 0px 0px 70px -23px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 70px -23px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.mobile__outline::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: #ffffff;
+  width: 12.9rem;
+  height: 2.9rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  z-index: 8;
+}
+
+.mobile__top {
+  width: 100%;
+  height: 6.7rem;
+  background-image: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to left, #e942ff, #8838ff);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 2.5rem 1.5rem 1rem 1.1rem;
+  color: #ffffff;
+}
+
+.mobile__top .top__arrow {
+  font-weight: 700;
+  -webkit-transform: scaleX(0.3) scaleY(1.5) translateY(2px);
+          transform: scaleX(0.3) scaleY(1.5) translateY(2px);
+}
+
+.mobile__top .top__avatar {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  margin: 0.9rem 1rem 0.5rem 0.5rem;
+}
+
+.mobile__top .top__user {
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mobile__top .user__name {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.mobile__top .user__status {
+  color: #d89eff;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  letter-spacing: -0.5px;
+}
+
+.mobile__top .top__settings {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  position: relative;
+}
+
+.mobile__top .top__settings::before, .mobile__top .top__settings::after {
+  content: ".";
+  display: block;
+  position: absolute;
+}
+
+.mobile__top .top__settings::before {
+  top: -4px;
+}
+
+.mobile__top .top__settings::after {
+  top: 4px;
 }
 /*# sourceMappingURL=main.css.map */
