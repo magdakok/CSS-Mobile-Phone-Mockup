@@ -345,7 +345,7 @@ body {
   color: #ffffff;
   background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
   background-image: linear-gradient(to right, #e942ff, #8838ff);
-  padding: 1rem;
+  padding: 1.1rem 1.6rem 0.8rem 0.7rem;
   display: block;
   max-width: none;
   width: 75%;
@@ -364,6 +364,16 @@ body {
   font-size: 1.3rem;
   line-height: 1.3rem;
   font-weight: 500;
+  margin-left: auto;
+}
+
+.mobile__chat .message--option .custom-radio {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 2px solid #e570ff;
+  margin-right: 0.8rem;
+  margin-top: -0.3rem;
 }
 
 .mobile__chat .pictures {

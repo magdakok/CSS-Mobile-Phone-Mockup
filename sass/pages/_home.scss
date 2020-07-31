@@ -211,7 +211,7 @@ body {
       &--option {
         color: $color-white;
         @include gradient;
-        padding: 1rem;
+        padding: 1.1rem 1.6rem 0.8rem 0.7rem;
         display: block;
         max-width: none;
         width: 75%;
@@ -224,6 +224,16 @@ body {
           font-size: 1.3rem;
           line-height: 1.3rem;
           font-weight: 500;
+          margin-left: auto;
+        }
+
+        .custom-radio {
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          border: 2px solid $color-radio-button;
+          margin-right: 0.8rem;
+          margin-top: -0.3rem;
         }
       }
     }
