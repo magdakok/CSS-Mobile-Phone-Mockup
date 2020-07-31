@@ -38,6 +38,8 @@ body {
   @media only screen and (max-width: 800px) {
     align-items: flex-start;
     padding-top: 6rem;
+    min-height: 150vh;
+    overflow: hidden;
   }
 }
 
