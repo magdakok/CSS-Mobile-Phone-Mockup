@@ -80,7 +80,8 @@ body {
     user-select: none;
 
     //animation below
-    animation: mobile-animation 0.3s;
+    animation: mobile-animation 0.3s 0.8s;
+    animation-fill-mode: backwards;
     @keyframes mobile-animation {
       from {
         opacity: 0;
