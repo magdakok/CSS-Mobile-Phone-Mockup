@@ -11,4 +11,4 @@ const sequenceAnimation = (elementsCss, initDelay, delay) => {
 };
 
 sequenceAnimation(".messages-box>li", 1000, 400); //all li elements in .messages-box
-sequenceAnimation(".text-section>*", 400, 300); //all li elements in .messages-box
+sequenceAnimation(".text-section>*", 400, 300); //all elements in .text-section
