@@ -9,7 +9,7 @@
 
 html {
   font-size: 62.5%;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 body {
@@ -31,6 +31,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
 .background-container {
@@ -63,6 +64,13 @@ body {
   left: -20.3%;
 }
 
+@media only screen and (max-width: 800px) {
+  .background-container::before {
+    left: -84%;
+    height: 50.4rem;
+  }
+}
+
 .background-container::after {
   content: "";
   display: block;
@@ -75,6 +83,22 @@ body {
   background-color: #f9f4fa;
   bottom: 0;
   right: -28.8%;
+}
+
+@media only screen and (max-width: 800px) {
+  .background-container::after {
+    right: -83.8%;
+    top: 43rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .background-container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 6rem;
+  }
 }
 
 .content {
@@ -92,6 +116,27 @@ body {
           align-items: center;
   -webkit-transform: translateX(5.3rem);
           transform: translateX(5.3rem);
+}
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    width: 80%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    width: 88%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+  }
 }
 
 .mobile__outline {
@@ -121,6 +166,15 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
+@media only screen and (max-width: 800px) {
+  .mobile__outline {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin-bottom: 6.7rem;
+  }
+}
+
 .mobile__outline::before {
   content: "";
   display: block;
@@ -137,8 +191,8 @@ body {
 }
 
 .mobile__outline:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-box-shadow: 0px 0px 90px -23px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 90px -23px rgba(0, 0, 0, 0.15);
 }
@@ -366,6 +420,19 @@ body {
   margin-left: 12.4rem;
 }
 
+@media only screen and (max-width: 1100px) {
+  .text-section {
+    margin-left: 6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text-section {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 .text-section .main-heading {
   font-size: 4.2rem;
   line-height: 4.3rem;
@@ -375,10 +442,40 @@ body {
   color: #3e2753;
 }
 
+@media only screen and (max-width: 1050px) {
+  .text-section .main-heading {
+    font-size: 2.5rem;
+    line-height: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text-section .main-heading {
+    font-size: 4.2rem;
+    line-height: 4.3rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
 .text-section .paragraph {
   font-size: 1.7rem;
   line-height: 2.75rem;
   letter-spacing: -0.4px;
   color: #a39daa;
+}
+
+@media only screen and (max-width: 1050px) {
+  .text-section .paragraph {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text-section .paragraph {
+    font-size: 1.7rem;
+    line-height: 2.75rem;
+    padding: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
