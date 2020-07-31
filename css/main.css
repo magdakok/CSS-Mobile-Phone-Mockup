@@ -175,10 +175,38 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-animation: mobile-animation 0.3s;
+          animation: mobile-animation 0.3s;
   -webkit-transition: -webkit-transform 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+}
+
+@-webkit-keyframes mobile-animation {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes mobile-animation {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -319,6 +347,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.mobile__chat .messages-box > * {
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.mobile__chat .messages-box .sequence-animation {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .mobile__chat .message {
