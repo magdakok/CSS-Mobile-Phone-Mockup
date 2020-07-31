@@ -1,6 +1,10 @@
 body {
   @include flex-center;
   overflow-x: hidden;
+  //temporary style for better screenshot on frontendmentor
+  @media only screen and (min-width: 1400px) {
+    min-height: 800px;
+  }
 }
 
 .background-container {
@@ -21,7 +25,6 @@ body {
     top: 0;
     left: -20.3%;
     @media only screen and (max-width: 800px) {
-      // left: -84%;
       left: -32.2rem;
       height: 51rem;
     }
@@ -32,7 +35,6 @@ body {
     bottom: 0;
     right: -28.8%;
     @media only screen and (max-width: 800px) {
-      // right: -83.8%;
       right: -32.2rem;
       top: 43rem;
     }
