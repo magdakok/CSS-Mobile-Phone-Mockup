@@ -98,7 +98,6 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
     padding-top: 6rem;
-    min-height: 150vh;
     overflow: hidden;
   }
 }
@@ -130,6 +129,8 @@ body {
 
 @media only screen and (max-width: 800px) {
   .content {
+    position: relative;
+    padding-bottom: 5rem;
     width: 88%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -164,6 +165,10 @@ body {
   -webkit-box-shadow: 0px 0px 70px -23px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 70px -23px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
