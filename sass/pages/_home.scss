@@ -1,19 +1,14 @@
 body {
   @include flex-center;
   overflow-x: hidden;
-  //temporary style for better screenshot on frontendmentor
-  @media only screen and (min-width: 1400px) {
-    min-height: 800px;
-  }
 }
 
 .background-container {
+  @include flex-center;
   width: 115.2rem;
   min-height: 100vh;
   z-index: 2;
   position: relative;
-
-  @include flex-center;
 
   &::before {
     @include background-shape(0 0 100vh 100vh);
@@ -47,11 +42,11 @@ body {
 }
 
 .content {
+  @include flex-center;
   position: absolute;
   width: 82.2rem;
   z-index: 10;
 
-  @include flex-center;
   transform: translateX(5.3rem);
   @media only screen and (max-width: 1200px) {
     width: 80%;
@@ -73,7 +68,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     position: relative;
 
     width: 24.8rem;
@@ -87,13 +81,11 @@ body {
 
     //animation below
     animation: mobile-animation 0.3s;
-
     @keyframes mobile-animation {
       from {
         opacity: 0;
         transform: scale(0);
       }
-
       to {
         opacity: 1;
         transform: scale(1);
@@ -128,10 +120,10 @@ body {
   }
 
   &__top {
-    width: 100%;
-    height: 6.7rem;
     @include gradient(to left);
     @include flex-center;
+    width: 100%;
+    height: 6.7rem;
     border-radius: 0 0 0.5rem 0.5rem;
     padding: 2.5rem 1.5rem 1rem 1.1rem;
     color: $color-white;
@@ -235,8 +227,8 @@ body {
       }
 
       &--option {
-        color: $color-white;
         @include gradient;
+        color: $color-white;
         padding: 1.1rem 1.6rem 0.8rem 0.7rem;
         display: block;
         max-width: none;
@@ -298,6 +290,7 @@ body {
       }
 
       &__btn {
+        @include flex-center;
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
@@ -305,7 +298,6 @@ body {
         color: $color-white;
         font-weight: 500;
         font-size: 1.3rem;
-        @include flex-center;
       }
     }
 
