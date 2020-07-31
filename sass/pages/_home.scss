@@ -311,6 +311,16 @@ body {
 
 .text-section {
   margin-left: 12.4rem;
+
+  //animation below
+  & > * {
+    transition: opacity 0.6s;
+    opacity: 0;
+  }
+  .sequence-animation {
+    opacity: 1;
+  }
+
   @media only screen and (max-width: 1100px) {
     margin-left: 6rem;
   }

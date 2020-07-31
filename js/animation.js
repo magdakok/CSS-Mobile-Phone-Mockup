@@ -1,7 +1,6 @@
-const lis = Array.from(document.querySelectorAll(".messages-box>li"));
-
-const sequenceAnimation = (elements, initDelay, delay) => {
-  elements.forEach((el, i) => {
+const sequenceAnimation = (elementsCss, initDelay, delay) => {
+  const elementsArray = Array.from(document.querySelectorAll(elementsCss));
+  elementsArray.forEach((el, i) => {
     setTimeout(
       () => {
         el.classList.add("sequence-animation");
@@ -11,4 +10,5 @@ const sequenceAnimation = (elements, initDelay, delay) => {
   });
 };
 
-sequenceAnimation(lis, 1000, 400);
+sequenceAnimation(".messages-box>li", 1000, 400); //all li elements in .messages-box
+sequenceAnimation(".text-section>*", 400, 300); //all li elements in .messages-box
