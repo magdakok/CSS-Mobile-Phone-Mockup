@@ -21,8 +21,9 @@ body {
     top: 0;
     left: -20.3%;
     @media only screen and (max-width: 800px) {
-      left: -84%;
-      height: 50.4rem;
+      // left: -84%;
+      left: -32.2rem;
+      height: 51rem;
     }
   }
   &::after {
@@ -31,13 +32,14 @@ body {
     bottom: 0;
     right: -28.8%;
     @media only screen and (max-width: 800px) {
-      right: -83.8%;
+      // right: -83.8%;
+      right: -32.2rem;
       top: 43rem;
     }
   }
   @media only screen and (max-width: 800px) {
     align-items: flex-start;
-    padding-top: 6rem;
+    padding-top: 6.4rem;
     overflow: hidden;
   }
 }

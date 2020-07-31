@@ -66,8 +66,8 @@ body {
 
 @media only screen and (max-width: 800px) {
   .background-container::before {
-    left: -84%;
-    height: 50.4rem;
+    left: -32.2rem;
+    height: 51rem;
   }
 }
 
@@ -87,7 +87,7 @@ body {
 
 @media only screen and (max-width: 800px) {
   .background-container::after {
-    right: -83.8%;
+    right: -32.2rem;
     top: 43rem;
   }
 }
@@ -97,7 +97,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-top: 6rem;
+    padding-top: 6.4rem;
     overflow: hidden;
   }
 }
